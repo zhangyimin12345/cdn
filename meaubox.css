@@ -1,0 +1,75 @@
+@import url("https://at.alicdn.com/t/c/font_4090357_z2qpnic06um.css");
+
+.menu-box {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 10px;
+    bottom: 10px;
+    z-index: 1000;
+}
+
+.menu-btn {
+    position: absolute;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    background-color: var(--sidebar-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 3px 4px var(--shadow-color);
+    cursor: pointer;
+    transition: all 0.75s;
+}
+
+.menu-btn .iconfont {
+    font-size: 32px;
+    color: var(--text-color);
+}
+
+.menu-child-btn {
+    width: 40px;
+    height: 40px;
+    background-color: var(--sidebar-bg);
+    box-shadow: 0 3px 4px var(--shadow-color);
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transform-origin: 100px;
+    transition-delay: calc(0.05s * var(--menu-index));
+    transition: 0.25s;
+    transform: rotate(0deg) translateX(80px);
+}
+
+.menu-child-btn .iconfont {
+    transform: rotate(calc(360deg / -8 * var(--menu-index)));
+    color: var(--text-color);
+}
+
+.menu-box:hover .menu-child-btn {
+    transform: rotate(calc(360deg / 8 * var(--menu-index)));
+}
+
+.menu-box:hover .menu-btn {
+    transform: rotate(315deg);
+}
+
+.menu-child-btn .i {
+    transform: none !important;
+    /* 移除原有的旋转 */
+    transition: transform 0.3s ease;
+}
+
+.menu-box:hover .menu-child-btn .i {
+    transform: rotate(calc(360deg / -8 * var(--menu-index))) !important;
+    /* 保持旋转效果 */
+}
