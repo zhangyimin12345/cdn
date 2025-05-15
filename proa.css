@@ -1,0 +1,17 @@
+.proa {
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 5px 5px;
+  text-decoration: none;
+  transition: all .35s ease;
+  background-image: linear-gradient(to bottom, var(--link-color) 0%, var(--link-color) 100%);
+}
+
+.proa:hover {
+  color: white;
+  background-size: 5px 50px;
+}
+
+.proa {
+  color: var(--primary-color);
+}
