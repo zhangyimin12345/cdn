@@ -1,0 +1,85 @@
+@media (min-height: 350px) {
+
+    h1 {
+        counter-increment: section-h1;
+    }
+
+    h1:hover::after {
+        content: " h1:" counter(section-h1);
+        color: lightgray;
+        display: inline;
+    }
+
+    h2 {
+        counter-increment: section-h2;
+    }
+
+    h2:hover::after {
+        content: " h2:" counter(section-h2);
+        color: lightgray;
+        display: inline;
+    }
+
+    h3 {
+        counter-increment: section-h3;
+    }
+
+    h3:hover::after {
+        content: " h3:" counter(section-h3);
+        color: lightgray;
+        display: inline;
+    }
+
+    h4 {
+        counter-increment: section-h4;
+    }
+
+    h4:hover::after {
+        content: " h4:" counter(section-h4);
+        color: lightgray;
+        display: inline;
+    }
+
+    h5 {
+        counter-increment: section-h5;
+    }
+
+    h5:hover::after {
+        content: " h5:" counter(section-h5);
+        color: lightgray;
+        display: inline;
+    }
+
+    h6 {
+        counter-increment: section-h6;
+    }
+
+    h6:hover::after {
+        content: " h6:" counter(section-h6);
+        color: lightgray;
+        display: inline;
+    }
+
+    h1::after,
+    h2::after,
+    h3::after,
+    h4::after,
+    h5::after,
+    h6::after {
+        transition: all .25s linear;
+        color: #0000;
+        content: "";
+        margin-left: -0.4375em;
+        display: inline;
+    }
+
+    h1:hover::after,
+    h2:hover::after,
+    h3:hover::after,
+    h4:hover::after,
+    h5:hover::after,
+    h6:hover::after {
+        transition: all .25s linear;
+        margin-left: 0 !important;
+    }
+}
